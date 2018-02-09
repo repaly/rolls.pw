@@ -15,12 +15,30 @@ h1, h2, h3, h4, h5, h6 {
 header {
   background-color: #2196F3;
   text-align: center;
+  box-shadow: 0 4px 10px #222;
+}
+
+/**************** Ribbon style *****************/
+
+.ribbon-container {
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  z-index: 1;
+  transform: rotate(315deg);
+}
+
+.ribbon {
+  width: 250px;
+  height: 50px;
 }
 
 .main-icon {
+  width: 200px;
+  height: 180px;
+  margin-top: 60px;
   -webkit-filter: drop-shadow(0px 1px 1px #222);
   filter: drop-shadow(0 1px 1px #222);
-  margin: 1em 2em;
 }
 
 .no-margin {
