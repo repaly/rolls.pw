@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
   background-color: #2196F3;
-  box-shadow: 0 2px 5px #222;
   width: 100%;
   margin: 0;
 }
@@ -73,4 +72,46 @@ header {
 main {
   height: 100vh;
   background-color: #E5E5E5;
+}
+
+.top-background-filler {
+  height: 80px;
+  background-color: #E5E5E5;
+}
+
+.page {
+  height: calc(100vh - 80px);
+  width: 60%;
+  margin: 0 auto;
+  background-color: #FAFAFA;
+}
+
+.button-container {
+  text-align: right;
+  display: block;
+  height: 80px;
+}
+
+.button-save {
+  position: relative;
+  top: 20px;
+  right: 20px;
+  color: #FFF;
+  font-size: 1em;
+  border: 1px solid #FF1744;
+  border-radius: 5px;
+  padding: 0.5em 2em;
+  background-color: #FF1744;
+  box-shadow: 0 2px 4px #666;
+}
+
+.main-editor {
+  width: 80%;
+  margin: 0 auto;
+  background-color: tomato;
+}
+
+.header-editor {
+  background-color: inherit;
+  height: 20%;
 }
