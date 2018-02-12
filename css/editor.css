@@ -81,7 +81,7 @@ main {
 
 .page {
   height: calc(100vh - 80px);
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   background-color: #FAFAFA;
 }
@@ -108,10 +108,27 @@ main {
 .main-editor {
   width: 80%;
   margin: 0 auto;
-  background-color: tomato;
+  background-color: deepskyblue;
 }
 
 .header-editor {
+  padding-top: 20px;
   background-color: inherit;
   height: 20%;
+}
+
+/*************** Main Components *************/
+
+#current-time {
+  color: #4F4F4F;
+}
+
+#header-article {
+  width: 100%;
+  color: #828282;
+  font-size: 4rem;
+}
+
+#header-article:focus {
+  outline: none;
 }
