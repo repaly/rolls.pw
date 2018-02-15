@@ -16,22 +16,28 @@ var currentDate = currentMonth + " " + currentDay + " " + currentYear;
 
 document.querySelector('#current-time').append(currentDate);
 
-//
+// заголовок редактора и обработчик событий
 var headerArticle = document.querySelector('#header-article');
 var counter = 25;
 
+document.addEventListener('click', () => {
+  if (document.activeElement === headerArticle) {
+    headerArticle.removeAttribute('placeholder');
+  } else if (!headerArticle.hasAttribute('placeholder')) {
+    headerArticle.setAttribute('placeholder', 'Заголовок');
+  }
+
+});
 
 function keyListener(){
-
-  console.log(headerArticle.value.length);
 
   if (headerArticle.value.length >= counter) {
     var headerFontSize = window.getComputedStyle(headerArticle).getPropertyValue('font-size');
     headerArticle.style.fontSize = parseInt(headerFontSize) / 2 + "px";
     counter += counter;
-    console.log("Counter = " + counter);
-  } else if (headerArticle.value.length < counter) {
-    
+  } else if (headerArticle.value.length === 0) {
+    headerArticle.style.fontSize = 4 + "rem";
+    counter /= 2;
   }
 
 }

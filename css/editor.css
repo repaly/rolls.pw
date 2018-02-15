@@ -108,14 +108,27 @@ main {
 .main-editor {
   width: 80%;
   margin: 0 auto;
-  background-color: deepskyblue;
+  border: 1px red solid;
 }
 
 .header-editor {
   padding-top: 20px;
   background-color: inherit;
-  height: 20%;
+  min-height: 25%;
+  border: 1px red solid;
 }
+
+.content-editor {
+  min-height: 50%;
+}
+
+.content-box {
+  margin-top: 1rem;
+  border: 1px red solid;
+
+}
+
+
 
 /*************** Main Components *************/
 
@@ -127,6 +140,8 @@ main {
   width: 100%;
   color: #828282;
   font-size: 4rem;
+  border: none;
+  background-color: inherit;
 }
 
 #header-article:focus {
