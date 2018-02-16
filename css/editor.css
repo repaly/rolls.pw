@@ -123,9 +123,43 @@ main {
 }
 
 .content-box {
+  position: relative;
   margin-top: 1rem;
+  font-size: 2em;
+  color: #000;
   border: 1px red solid;
+}
 
+.list-box {
+  padding: 0;
+  list-style-type: none;
+}
+
+.toolbar {
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  display: inline-block;
+  background-color: salmon;
+}
+
+.toolbar span {
+}
+
+.toolbar img {
+  width: 16px;
+  height: 16px;
+
+}
+
+.text-box {
+  outline: none;
+  display: inline-block;
+  max-width: 75%;
+}
+
+.text-box:focus {
+  background-color: #eee;
 }
 
 

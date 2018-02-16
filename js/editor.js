@@ -21,6 +21,7 @@ var headerArticle = document.querySelector('#header-article');
 var counter = 25;
 
 document.addEventListener('click', () => {
+
   if (document.activeElement === headerArticle) {
     headerArticle.removeAttribute('placeholder');
   } else if (!headerArticle.hasAttribute('placeholder')) {
