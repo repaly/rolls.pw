@@ -106,16 +106,17 @@ main {
 }
 
 .main-editor {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   border: 1px red solid;
 }
 
 .header-editor {
+  margin: auto;
+  width: 80%;
   padding-top: 20px;
   background-color: inherit;
   min-height: 25%;
-  border: 1px red solid;
 }
 
 .content-editor {
@@ -124,10 +125,13 @@ main {
 
 .content-box {
   position: relative;
-  margin-top: 1rem;
   font-size: 2em;
   color: #000;
   border: 1px red solid;
+  background-color: #fff;
+  box-shadow: 0 2px 10px;
+  width: 80%;
+  margin: auto;
 }
 
 .list-box {
@@ -135,35 +139,17 @@ main {
   list-style-type: none;
 }
 
-.toolbar {
-  position: absolute;
-  z-index: 2;
-  right: 15px;
-  display: inline-block;
-  background-color: salmon;
-}
-
-.toolbar span {
-}
-
-.toolbar img {
-  width: 16px;
-  height: 16px;
-
-}
-
 .text-box {
   outline: none;
   display: inline-block;
-  max-width: 75%;
+  max-width: 100%;
 }
 
-.text-box:focus {
-  background-color: #eee;
+.text-box::before {
+  content: url('../img/text-icon.svg');
+  position: relative;
+  right: 32px;
 }
-
-
-
 /*************** Main Components *************/
 
 #current-time {
