@@ -42,3 +42,15 @@ function keyListener(){
   }
 
 }
+
+// quill редактор
+
+var quill = new Quill('.text-box', {
+  modules: {
+    toolbar: [
+      ['bold', 'italic', 'underline'],
+    ]
+  },
+  placeholder: 'Пиши, сокращай..',
+  theme: 'bubble'
+});
