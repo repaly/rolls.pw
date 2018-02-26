@@ -165,8 +165,16 @@ main {
 .button-container-center {
   margin-top: 5rem;
   text-align: center;
+  position: relative;
 }
 
+.dropdown-menu-container {
+  margin: 0 5px;
+  position: absolute;
+  left: 30%;
+  top: -10%;
+  display: inline;
+}
 /*************** Main Components *************/
 
 #current-time {
@@ -194,4 +202,26 @@ main {
   padding: 0.2em 0.5em;
   background-color: #FF1744;
   box-shadow: 0 2px 4px #666;
+}
+
+#dropdown-menu {
+  display: inline-block;
+  background-color: #111;
+  border-radius: 10px;
+  padding: 0;
+  position: relative;
+
+}
+
+#dropdown-menu li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 5px;
+}
+
+#dropdown-menu img {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  padding: 8px 5px;
 }

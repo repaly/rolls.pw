@@ -17,6 +17,7 @@ var currentDate = currentMonth + " " + currentDay + " " + currentYear;
 document.querySelector('#current-time').append(currentDate);
 
 // заголовок редактора и обработчик событий
+
 var headerArticle = document.querySelector('#header-article');
 var counter = 25;
 
@@ -30,7 +31,7 @@ document.addEventListener('click', () => {
 
 });
 
-function keyListener(){
+function keyListener() {
 
   if (headerArticle.value.length >= counter) {
     var headerFontSize = window.getComputedStyle(headerArticle).getPropertyValue('font-size');
@@ -54,3 +55,19 @@ var quill = new Quill('.text-box', {
   placeholder: 'Пиши, сокращай..',
   theme: 'bubble'
 });
+
+// кнопка вызова боксов
+
+var buttonAdd = document.querySelector('#button-add');
+var menu = document.querySelector('.dropdown-menu-container');
+
+function showMenu() {
+
+  if (menu.style.display === "inline") {
+    menu.style.display = "none";
+  }
+  else {
+    menu.style.display = "inline";
+  }
+
+}
