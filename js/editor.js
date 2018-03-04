@@ -81,14 +81,22 @@ function toogleMenu() {
 var headerButton = document.querySelector('#header-button');
 var paragraphButton = document.querySelector('#paragraph-button');
 var layoutButton = document.querySelector('#layout-button');
-var linkButton = document.querySelector('#link-button');
+var linkButton = document.querySelector('#link-button'); 
+var listBox = document.querySelector('.list-box');
+
+
+
 
 document.addEventListener('click', (event) => {
 
   if (event.target === headerButton) {
-    console.log("headerButton");
+
+    listBox.appendChild(headerBox());
+
   } else if (event.target === paragraphButton) {
-    console.log("paragraphButton");
+
+    listBox.appendChild(textBox());
+
   } else if (event.target === layoutButton) {
     console.log("layoutButton");
   } else if (event.target === linkButton) {
@@ -98,6 +106,30 @@ document.addEventListener('click', (event) => {
   if (menuIsDisplayed) {
     toogleMenu();
   } else if (event.target === buttonAdd) {
-     toogleMenu();
+    toogleMenu();
   }
+
 });
+
+// функции добавления боксов
+
+function headerBox() {
+  var newListItemElement = document.createElement("li");
+  newListItemElement.className = "header-icon list-item";
+  newListItemElement.innerHTML = '<div class="content-box">' +
+  '<input class="header-title" type="text" placeholder="Заголовочек">' +
+  '</div>';
+  return newListItemElement;
+}
+
+function textBox() {
+  var newListItemElement = document.createElement("li");
+  newListItemElement.className = "text-icon list-item";
+  newListItemElement.innerHTML = '<div class="content-box">' +
+  '<div class="text-box"></div>' +
+  '</div>';
+
+// надо пошаманить с quill редактором, чтобы новый текстбокс неконфликтовал со старым
+
+  return newListItemElement;
+}
