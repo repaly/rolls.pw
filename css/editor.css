@@ -182,6 +182,15 @@ main {
   content:"";
 }
 
+.layout-icon::before {
+  background-image: url('../img/layout-icon.svg');
+  background-size: 20px 36px;
+  display: inline-block;
+  width: 20px;
+  height: 36px;
+  content:"";
+}
+
 .button-container-center {
   margin-top: 5rem;
   text-align: center;

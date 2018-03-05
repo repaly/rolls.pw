@@ -46,9 +46,9 @@ function keyListener() {
 
 }
 
-// quill редактор
+// добавляю quill редактор к первому текст боксу
 
-var quill = new Quill('.text-box', {
+new Quill('.quill', {
   modules: {
     toolbar: [
       ['bold', 'italic', 'underline'],
@@ -125,11 +125,24 @@ function headerBox() {
 function textBox() {
   var newListItemElement = document.createElement("li");
   newListItemElement.className = "text-icon list-item";
-  newListItemElement.innerHTML = '<div class="content-box">' +
-  '<div class="text-box"></div>' +
-  '</div>';
 
-// надо пошаманить с quill редактором, чтобы новый текстбокс неконфликтовал со старым
+  var newContentBoxElement = document.createElement("div");'<div class="content-box"></div>';
+  newContentBoxElement.className = "content-box";
+  newListItemElement.appendChild(newContentBoxElement);
+
+  var newQuilElement = document.createElement("div");
+  newQuilElement.className = "text-box";
+  newContentBoxElement.appendChild(newQuilElement);
+
+  new Quill(newQuilElement, {
+    modules: {
+      toolbar: [
+        ['bold', 'italic', 'underline'],
+      ]
+    },
+    placeholder: 'Пиши, сокращай..',
+    theme: 'bubble'
+  });
 
   return newListItemElement;
 }
